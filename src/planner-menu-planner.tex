@@ -1,0 +1,59 @@
+% This is a worksheet for scouts planning a campout that focuses on documenting
+% the menu for the campout. It includes sections for each meal, with space for
+% scouts to list the main course, sides, and drinks for each meal.
+
+\documentclass[letterpaper]{exam}
+\usepackage{hyperref}
+
+% Custom command that renders a meal question
+\newcommand{\mealquestion}{
+  \question
+    Day: \begin{oneparcheckboxes} \choice Fri \choice Sat \choice Sun \choice Mon \choice Tue \choice Wed \choice Thu \end{oneparcheckboxes}
+  
+    Meal: \begin{oneparcheckboxes} \choice Breakfast \choice Lunch \choice Dinner \choice Snack \end{oneparcheckboxes}
+
+    Cook: \fillin Clean: \fillin
+  \begin{parts}
+    \part Main:
+    \vspace{\stretch{1}}
+    \part Sides:
+    \vspace{\stretch{1}}
+    \part Drinks:
+    \vspace{\stretch{1}}
+  \end{parts}
+}
+
+% Set the \fillin length
+\setlength\fillinlinelength{2in}
+
+% Define the header
+\pagestyle{head}
+\runningheadrule
+\header{Patrol Campout Planner}{Menu}{}
+
+\begin{document}
+
+% Campout metadata
+\input{src/snippets/snippet-planner-meta.tex}
+
+\vspace{5mm}
+\begin{questions}
+
+% Friday dinner
+\mealquestion
+
+% Saturday breakfast
+\mealquestion
+
+% Saturday lunch
+\mealquestion
+
+% Saturday dinner
+\mealquestion
+
+% Sunday breakfast
+\mealquestion
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,52 @@
+% This is a worksheet for scouts planning a campout that focuses on documenting
+% the activities planned for the campout. Each activity specifies when it
+% occurs, reservation requirements, and a space for scouts to write down what
+% the activity is.
+
+\documentclass[letterpaper]{exam}
+\usepackage{hyperref}
+
+% Custom command that renders an activity question
+\newcommand{\activityquestion}{
+  \question
+    Day: \begin{oneparcheckboxes} \choice Fri \choice Sat \choice Sun \choice Mon \choice Tue \choice Wed \choice Thu \end{oneparcheckboxes}
+  
+    When: \begin{oneparcheckboxes} \choice Morning \choice Afternoon \choice Evening \end{oneparcheckboxes}
+
+    Reservation: \begin{oneparcheckboxes} \choice Needed \choice Booked \end{oneparcheckboxes}
+
+    What:
+    \vspace{\stretch{1}}
+}
+
+% Define the header
+\pagestyle{head}
+\runningheadrule
+\header{Patrol Campout Planner}{Activities}{}
+
+\begin{document}
+
+% Campout metadata
+\input{src/snippets/snippet-planner-meta.tex}
+
+\vspace{5mm}
+\begin{questions}
+
+% Friday evening
+\activityquestion
+
+% Saturday morning
+\activityquestion
+
+% Saturday afternoon
+\activityquestion
+
+% Saturday evening
+\activityquestion
+
+% Sunday morning
+\activityquestion
+
+\end{questions}
+
+\end{document}

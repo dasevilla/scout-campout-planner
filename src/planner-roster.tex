@@ -1,0 +1,89 @@
+% This is worksheet for scouts planning a campout that focuses on documenting
+% who will be attending the campout. It includes sections for each attendee's
+% role and name.
+
+\documentclass[letterpaper]{exam}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{array}
+
+\newcommand{\mealquestion}{
+  \question
+    Day: \begin{oneparcheckboxes} \choice Fri \choice Sat \choice Sun \choice Mon \choice Tue \choice Wed \choice Thu \end{oneparcheckboxes}
+  
+    Meal: \begin{oneparcheckboxes} \choice Breakfast \choice Lunch \choice Dinner \choice Snack \end{oneparcheckboxes}
+  \begin{parts}
+    \part Main:
+    \vspace{\stretch{1}}
+    \part Sides:
+    \vspace{\stretch{1}}
+    \part Drinks:
+    \vspace{\stretch{1}}
+  \end{parts}
+}
+
+% Define the header
+\pagestyle{head}
+\runningheadrule
+\header{Patrol Campout Planner}{Roster}{}
+
+\begin{document}
+% Table settings
+\input{src/snippets/snippet-table-settings.tex}
+
+% Campout metadata
+\input{src/snippets/snippet-planner-meta.tex}
+
+% Table of the list of scouts attending
+\vspace{5mm}
+\begin{center}
+\begin{tabular}{ c | m{4in} | c | c }
+  \textbf{Role} & \textbf{Name} & \textbf{Attending} & \textbf{Paid} \\
+  \hline
+  SPL & & & \\
+  \hline
+  ASPL & & & \\
+  \hline
+  PL & & & \\
+  \hline
+  APL & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+  \hline
+  & & & \\
+\end{tabular}
+\end{center}
+
+\end{document}

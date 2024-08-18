@@ -1,0 +1,88 @@
+% This is a worksheet for scouts planning a campout that focuses on documenting
+% the shopping list for the campout. It includes a table for scouts to list the
+% items they need to purchase, along with the quantity of each item.
+
+\documentclass[letterpaper]{exam}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{array}
+
+\newcommand{\mealquestion}{
+  \question
+    Day: \begin{oneparcheckboxes} \choice Fri \choice Sat \choice Sun \choice Mon \choice Tue \choice Wed \choice Thu \end{oneparcheckboxes}
+  
+    Meal: \begin{oneparcheckboxes} \choice Breakfast \choice Lunch \choice Dinner \choice Snack \end{oneparcheckboxes}
+  \begin{parts}
+    \part Main:
+    \vspace{\stretch{1}}
+    \part Sides:
+    \vspace{\stretch{1}}
+    \part Drinks:
+    \vspace{\stretch{1}}
+  \end{parts}
+}
+
+% Define the header
+\pagestyle{head}
+\runningheadrule
+\header{Patrol Campout Planner}{Shopping list}{}
+
+\begin{document}
+% Table settings
+\input{src/snippets/snippet-table-settings.tex}
+
+% Campout metadata
+\input{src/snippets/snippet-planner-meta.tex}
+
+\vspace{5mm}
+\begin{center}
+\begin{tabular}{ c | m{5in} | c }
+  \textbf{\ding{51}} & \textbf{Item} & \textbf{Quantity} \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+  \hline
+  & &  \\
+\end{tabular}
+\end{center}
+
+\end{document}
