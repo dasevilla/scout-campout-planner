@@ -45,5 +45,5 @@ $(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.tex
 # GitHub release target that creates a release, and uploads all the PDFs as assets
 # Uses the GitHub CLI (gh) to create the release and upload the assets
 .PHONY: release
-release: $(COMBINED_PDF)
-	gh release create v$(shell date +%Y%m%d%H%M%S) $(COMBINED_PDF) $(PDF_FILES)
+release: $(PDF_FILES) $(COMBINED_PDF)
+	gh release create --generate-notes --latest v$(shell date +%Y%m%d%H%M%S) $(COMBINED_PDF) $(PDF_FILES)
