@@ -7,6 +7,9 @@ BUILD_DIR=build
 # All TeX files in the source directory
 TEX_FILES=$(wildcard $(SRC_DIR)/*.tex)
 
+# Snippet files
+SNIPPET_FILES=$(wildcard $(SRC_DIR)/snippets/*.tex)
+
 # All PDF files in the build directory
 PDF_FILES=$(patsubst $(SRC_DIR)/%.tex,$(BUILD_DIR)/%.pdf,$(TEX_FILES))
 
@@ -39,7 +42,7 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
 # Rule to generate PDF files from TeX files
-$(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.tex
+$(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.tex $(SNIPPET_FILES)
 	latexmk -pdf -output-directory=$(BUILD_DIR) -auxdir=$(BUILD_DIR) $<
 
 # GitHub release target that creates a release, and uploads all the PDFs as assets
