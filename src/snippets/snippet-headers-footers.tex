@@ -1,0 +1,11 @@
+% This snippet is used to define the headers and footers for worksheets.
+% How to use:
+%   \input{src/snippets/snippet-headers-footers.tex}
+%   \worksheetheadfoot{Campout Planner}
+
+\newcommand{\worksheetheadfoot}[1]{
+    \pagestyle{headandfoot}
+    \runningheadrule
+    \header{Patrol Campout Planner}{#1}{}
+    \rfoot{ASM Review: \underline{\hspace{1in}}}
+}
