@@ -51,6 +51,12 @@ File: [planner-roster.pdf](https://github.com/dasevilla/scout-campout-planner/re
 A worksheet for documenting who will be attending the campout. Scouts can list each attendee's role and name.
 
 
+#### Review
+
+File: [planner-review.pdf](https://github.com/dasevilla/scout-campout-planner/releases/latest/download/planner-review.pdf)
+
+A worksheet for reviewing the campout after it occurred using the start-stop-continue method.
+
 ## Development
 
 ### Install

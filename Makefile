@@ -22,7 +22,8 @@ COMBINED_PDF_REQS=$(BUILD_DIR)/planner-overview.pdf \
 	$(BUILD_DIR)/planner-menu-shopping-list.pdf \
 	$(BUILD_DIR)/planner-activities.pdf \
 	$(BUILD_DIR)/planner-equipment.pdf \
-	$(BUILD_DIR)/planner-roster.pdf
+	$(BUILD_DIR)/planner-roster.pdf \
+	$(BUILD_DIR)/planner-review.pdf
 
 # Default target
 .PHONY: all
